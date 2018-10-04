@@ -1,0 +1,27 @@
+<div class="searchcontainer">
+  <mat-grid-list cols="5" rowHeight="100px">
+      <mat-grid-tile colspan="1">
+        <h4>From Date:</h4>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1">
+        <mat-form-field>
+            <input matInput [matDatepicker]="fromDate" placeholder="Choose a date">
+            <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+            <mat-datepicker #fromDate></mat-datepicker>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1">
+          <h4>To Date:</h4>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="1">
+          <mat-form-field>
+              <input matInput [matDatepicker]="toDate" placeholder="Choose a date">
+              <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+              <mat-datepicker #toDate></mat-datepicker>
+            </mat-form-field>
+        </mat-grid-tile>
+    <mat-grid-tile colspan="1">
+      <button mat-raised-button color="primary">Search</button>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

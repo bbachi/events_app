@@ -1,0 +1,7 @@
+{
+    "/eventsApp/api": {
+      "target": "http://localhost:3010",
+      "secure": false,
+      "logLevel": "debug"
+    }
+  }

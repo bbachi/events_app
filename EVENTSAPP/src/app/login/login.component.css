@@ -1,0 +1,17 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-title {
+   margin-left: 160px;
+}
+
+mat-card {
+  margin: 8% 30%;
+  width: 30%;
+}
+
+mat-card-actions {
+  margin-left: 40%;
+}
