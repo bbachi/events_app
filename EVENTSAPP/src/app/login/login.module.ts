@@ -6,6 +6,7 @@ import { LoginComponent } from './login.component'
 import { EventsAppMaterialModule } from '../app.material.module'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginEffects } from '../app-state/effects'
+import { ToLowerCasePipe, NOwhiteSpacePipe, CamelcasePipe } from '../_pipes';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { LoginEffects } from '../app-state/effects'
     EventsAppMaterialModule,
     EffectsModule.forRoot([LoginEffects])
   ],
-  declarations: [ LoginComponent ]
+  declarations: [ LoginComponent, ToLowerCasePipe, NOwhiteSpacePipe, CamelcasePipe ],
+  providers: [ ToLowerCasePipe, NOwhiteSpacePipe, CamelcasePipe ]
 })
 export class LoginModule { }

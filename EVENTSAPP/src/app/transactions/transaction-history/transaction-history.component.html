@@ -1,7 +1,10 @@
 <div class="transactioncont">
   <h2>Transaction History</h2>
   <mat-divider></mat-divider>
-  <app-transaction-search></app-transaction-search>
+  <app-transaction-search (searchEvent)="search($event)"></app-transaction-search>
   <mat-divider></mat-divider>
-  <app-transaction-list></app-transaction-list>
+  <app-loading *ngIf="(transactions$ | async).isLoading; else showResult"></app-loading>
+  <ng-template #showResult>
+    <app-transaction-list [transactionList]="(transactions$ | async).data"></app-transaction-list>
+  </ng-template>
 </div>

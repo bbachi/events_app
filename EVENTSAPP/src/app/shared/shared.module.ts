@@ -4,6 +4,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventsAppMaterialModule } from '../app.material.module';
 import { RouterModule } from '@angular/router';
+import { LoadingComponent } from './progress/loading.component';
 
 @NgModule({
   imports: [
@@ -13,11 +14,13 @@ import { RouterModule } from '@angular/router';
   ],
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingComponent
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    LoadingComponent
   ]
 })
 export class SharedModule { }

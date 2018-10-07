@@ -26,9 +26,11 @@ import { storeFreeze } from 'ngrx-store-freeze';
  */
 
 import * as fromLoggedInUser from './loggedinuser';
+import * as fromTransactions from './transactions';
 
 export interface State {
     loggedinuser: fromLoggedInUser.State;
+    transactions: fromTransactions.State;
     routerReducer: fromRouter.RouterReducerState<RouterStateUrl>;
 }
 
@@ -39,6 +41,7 @@ export interface State {
  */
 export const reducers: ActionReducerMap<State> = {
   loggedinuser: fromLoggedInUser.reducer,
+  transactions: fromTransactions.reducer,
   routerReducer: fromRouter.routerReducer,
 };
 
@@ -81,3 +84,13 @@ export const validateLogin = createSelector(
    fromLoggedInUser.validateLogin
 )
 /* Loggedin User end */
+
+/* Transactions Start */
+export const getTransactionState = createFeatureSelector<fromTransactions.State>('transactions');
+
+export const getTransactions = createSelector(
+    getTransactionState,
+    fromTransactions.listTransactions
+)
+
+/* Transactions End */

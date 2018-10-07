@@ -18,7 +18,7 @@ export class BaseService implements OnInit {
     
     }
 
-    callAPI(url: string, inData: any): Observable<any> {
+    post(url: string, inData: any): Observable<any> {
     
     let headers = new Headers({'Content-Type' : 'application/json'});
     let options = new RequestOptions({headers: headers});
@@ -31,7 +31,7 @@ export class BaseService implements OnInit {
         
     }
 
-    getAPI(url: string):  Observable<any> {
+    get(url: string):  Observable<any> {
         let headers = new Headers({'Content-Type' : 'application/json'});
         let options = new RequestOptions({headers: headers});
 
@@ -46,7 +46,6 @@ export class BaseService implements OnInit {
     private handleError(error: Response) {
         console.log('ERROR::STATUS:::::' + error.status);
         console.log('ERROR::STATUS TEXT:::::' + error.statusText);
-        console.log('ERROR::BODY:::::' + error['_body']);
         if(error.status == 504 || error.status == 502 || error.status == 503){
             return of("");
         }else{

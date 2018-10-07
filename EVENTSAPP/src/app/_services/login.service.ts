@@ -11,7 +11,7 @@ export class LoginService {
     constructor(private restService: BaseService){}
 
     public validateLogin(postData: Login): Observable<any> {
-        return this.restService.callAPI(this.loginUrl,postData);
+        return this.restService.post(this.loginUrl,postData);
     }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-transaction-search',
@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class TransactionSearchComponent implements OnInit {
 
   constructor() { }
+  @Output() searchEvent = new EventEmitter<any>();
+  fDate: any;
+  tDate: any;
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  search() {
+    this.searchEvent.emit({fromDate:this.fDate,toDate:this.tDate});
   }
 
 }
