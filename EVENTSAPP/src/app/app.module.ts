@@ -10,7 +10,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppRoutingModule } from './app.routing.module';
 
 import { EventsAppMaterialModule } from './app.material.module';
-import { LoginService, BaseService } from './_services';
+import { LoginService, BaseService, SignupService } from './_services';
 
 //Feature Modules
 import { SharedModule } from './shared/shared.module'
@@ -26,7 +26,7 @@ import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +53,7 @@ import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router
     */
     StoreRouterConnectingModule,
   ],
-  providers: [ LoginService, BaseService ],
+  providers: [ LoginService, BaseService, SignupService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

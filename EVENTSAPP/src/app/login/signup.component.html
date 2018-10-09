@@ -1,0 +1,24 @@
+<mat-card  class="login-card">
+  <!--<mat-card class="errcls" *ngIf="errorMessage">{{errorMessage | camelcase}}</mat-card> -->
+  <mat-card-header>
+      <mat-card-title>Sign up</mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+    <mat-card-content>
+      <div class="example-container">
+        <mat-form-field>
+          <input #spy matInput  placeholder="Username" formControlName="userName">
+        </mat-form-field>
+        <mat-form-field>
+          <input  matInput  placeholder="email" formControlName="email"  name="email">
+        </mat-form-field>
+        <mat-form-field>
+          <input  matInput  placeholder="password" formControlName="password"  type="password">
+        </mat-form-field>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button id="signup" appSignupbutton mat-raised-button color="primary">Signup</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

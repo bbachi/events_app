@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-    this.store.select(fromRoot.getLoggedInUser)
+    /*this.store.select(fromRoot.getLoggedInUser)
     .pipe(
        takeUntil(this.destroy$),
      )
@@ -27,6 +27,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
        console.log("in header!")
        this.isLoggedIn = data
       })
+      */
   }
 
   ngOnDestroy(){

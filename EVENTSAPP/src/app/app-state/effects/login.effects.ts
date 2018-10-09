@@ -2,13 +2,13 @@ import { catchError, map, startWith, switchMap } from 'rxjs/operators';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Injectable } from "@angular/core";
 import { Observable, of as observableOf } from 'rxjs';
-import { LoginService } from '../../_services';
-import * as loggedInActions from '../actions/loggedinuser';
+import { LoginService, SignupService } from '../../_services';
+import * as loggedInActions from '../actions/user';
 
 @Injectable()
 export class LoginEffects {
 
-  constructor(private action$: Actions, private loginService: LoginService) { }
+  constructor(private action$: Actions, private loginService: LoginService, private signupService: SignupService) { }
 
 
   @Effect()
@@ -26,4 +26,21 @@ export class LoginEffects {
         )
     )
   )
+
+  @Effect()
+  signupUserEffects$ = this.action$.pipe(
+    ofType<loggedInActions.SignupUser>(
+      loggedInActions.ActionTypes.SIGNUP_USER
+    ),
+    startWith(new loggedInActions.SignupUser({})),
+    switchMap(action => 
+        this.signupService.signupUser(action.payload).pipe(
+          map(data => new loggedInActions.SignupUserSuccess(data)),
+          catchError(error =>
+            observableOf(new loggedInActions.SignupUserFailure({ error }))
+          )
+        )
+    )
+  )
+
 }

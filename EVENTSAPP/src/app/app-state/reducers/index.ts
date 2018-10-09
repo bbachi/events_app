@@ -83,6 +83,11 @@ export const validateLogin = createSelector(
    getLoggedInUserState,
    fromLoggedInUser.validateLogin
 )
+
+export const signupUser = createSelector(
+  getLoggedInUserState,
+  fromLoggedInUser.signupUser
+)
 /* Loggedin User end */
 
 /* Transactions Start */

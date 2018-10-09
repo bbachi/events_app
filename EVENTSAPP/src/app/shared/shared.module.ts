@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { EventsAppMaterialModule } from '../app.material.module';
 import { RouterModule } from '@angular/router';
 import { LoadingComponent } from './progress/loading.component';
+import { LoginbuttonDirective, SignupbuttonDirective } from '../_directives'
 
 @NgModule({
   imports: [
@@ -15,12 +16,16 @@ import { LoadingComponent } from './progress/loading.component';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    LoadingComponent
+    LoadingComponent,
+    LoginbuttonDirective,
+    SignupbuttonDirective
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    LoadingComponent
+    LoadingComponent,
+    LoginbuttonDirective,
+    SignupbuttonDirective
   ]
 })
 export class SharedModule { }

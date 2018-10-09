@@ -1,0 +1,27 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-card-title {
+     margin-left: 460px;
+  }
+  
+  mat-tab-group {
+    margin: 8% 30%;
+    width: 30%;
+  }
+  
+  .login-card {
+    margin: 3% 4%;
+  }
+  
+  mat-card-actions {
+    margin-left: 45%;
+  }
+  
+  .errcls{
+     background-color: red;
+     margin-bottom: 10px;
+     color: white;
+  }

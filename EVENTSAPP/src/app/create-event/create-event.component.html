@@ -1,0 +1,43 @@
+<mat-card  class="login-card">
+  <mat-card-header>
+      <mat-card-title><h2>Create Event</h2></mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="eventForm" (ngSubmit)="onContinue()">
+    <mat-card-content>
+      <div  class="example-container">
+        <mat-form-field>
+          <input matInput  formControlName="name" placeholder="Event Name"  name="name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput  formControlName="date" placeholder="Event Date"  name="date">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput  formControlName="time" placeholder="Event Time"  name="time">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput  formControlName="host" placeholder="Event Host"  name="host">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput  formControlName="inviteNumber" placeholder="Number of Invites"  name="inviteNumber">
+        </mat-form-field>
+        <div class="example-container" formGroupName="address">
+          <mat-form-field>
+            <input  matInput  formControlName="street" placeholder="street" name="street">
+          </mat-form-field>
+          <mat-form-field>
+            <input  matInput  formControlName="city" placeholder="city" name="city">
+          </mat-form-field>
+          <mat-form-field>
+            <input  matInput  formControlName="state" placeholder="state" name="state">
+          </mat-form-field>
+          <mat-form-field>
+            <input  matInput  formControlName="zipcode" placeholder="zipcode" name="zipcode">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button appLoginbutton mat-raised-button color="primary">Continue</button>
+    </mat-card-actions>
+  </form>
+</mat-card>

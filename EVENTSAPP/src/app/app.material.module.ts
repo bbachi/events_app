@@ -6,6 +6,8 @@ import { MatSelectModule } from  '@angular/material/select';
 import { MatSliderModule } from  '@angular/material/slider';
 import { MatDividerModule } from  '@angular/material/divider';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
 imports: [
@@ -31,7 +33,9 @@ imports: [
   MatInputModule, 
   MatPaginatorModule,
   MatAutocompleteModule,
-  MatGridListModule
+  MatGridListModule,
+  MatTreeModule,
+  MatListModule
 ],
 exports: [
   MatTabsModule,
@@ -57,7 +61,9 @@ exports: [
   MatInputModule, 
   MatPaginatorModule,
   MatAutocompleteModule,
-  MatGridListModule
+  MatGridListModule,
+  MatTreeModule,
+  MatListModule
 ],
 
 })

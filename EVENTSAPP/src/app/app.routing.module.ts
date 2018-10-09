@@ -6,6 +6,7 @@ const routes: Routes = [
   { path: 'dashboard', loadChildren: 'src/app/dashboard/dashboard.module#DashboardModule' },
   { path: 'eventdetail', loadChildren: 'src/app/event-detail/event-detail.module#EventDetailModule' },
   { path: 'transactions', loadChildren: 'src/app/transactions/transactions.module#TransactionsModule' },
+  { path: 'event', loadChildren: 'src/app/create-event/create-event.module#CreateEventModule' },
   { path: '**', loadChildren: 'src/app/login/login.module#LoginModule' }
 ];
 

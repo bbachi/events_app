@@ -29,9 +29,6 @@ class App {
                     resave: true,
                     saveUninitialized: true,
                     rolling: true,
-                    cookie: {
-                    path: "/",
-                    }
         }));
 
         this.express.use(bodyParser.urlencoded({ extended: false }));

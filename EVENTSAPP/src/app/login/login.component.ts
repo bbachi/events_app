@@ -5,7 +5,7 @@ import { takeUntil } from 'rxjs/operators'
 import { Login } from '../_models'
 import { Store } from '@ngrx/store';
 import * as fromRoot from '../app-state/reducers';
-import * as loggedInActions from '../app-state/actions/loggedinuser'
+import * as loggedInActions from '../app-state/actions/user'
 import { ToLowerCasePipe, NOwhiteSpacePipe } from '../_pipes'
 
 @Component({
@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit, OnDestroy {
       .subscribe(data => this.redirectUser(data))
   }
 
-  sanitizeUserName(userName: string){
+  sanitizeUserName(userName: string): string {
      let username = this.noWhiteSpace.transform(userName);
      return this.toLowerCase.transform(username);
   }

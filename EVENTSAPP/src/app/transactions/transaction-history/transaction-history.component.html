@@ -1,7 +1,7 @@
 <div class="transactioncont">
   <h2>Transaction History</h2>
   <mat-divider></mat-divider>
-  <app-transaction-search (searchEvent)="search($event)"></app-transaction-search>
+  <app-transaction-search fromDateTitle="From Date" toDateTitle="To Date" (searchEvent)="search($event)"></app-transaction-search>
   <mat-divider></mat-divider>
   <app-loading *ngIf="(transactions$ | async).isLoading; else showResult"></app-loading>
   <ng-template #showResult>

@@ -1,8 +1,8 @@
 <mat-toolbar  color="primary"  class="fixed-header">
     <mat-toolbar-row>
         <span><img  src="./assets/logo.png"  style="width:50px;"></span>
-        <a  mat-button  routerLink="/customer-list"  routerLinkActive="active">Customers</a>
-        <a  mat-button  routerLink="/customer-create">Create Event</a>
+        <a  mat-button  routerLink="/events"  routerLinkActive="active">Events</a>
+        <a  mat-button  routerLink="/event/create">Create Event</a>
         <a  mat-button  routerLink="/transactions">Transactions</a>
         <a  *ngIf="!isLoggedIn; else loggout" mat-button  routerLink="/login">Login</a>
         <ng-template #loggout>

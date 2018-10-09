@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared/shared.module'
 import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard.routing.module';
 import { SearchComponent } from './search/search.component'
@@ -11,6 +12,7 @@ import { EventComponent } from './events-list/event.component';
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     DashboardRoutingModule,
     EventsAppMaterialModule,
     FormsModule,
